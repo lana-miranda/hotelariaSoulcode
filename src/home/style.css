@@ -130,7 +130,7 @@ O menu passa a ser o hamburger depois que diminui */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: first baseline;
   width: 100vw;
   height: 120vh;
 }
@@ -139,15 +139,17 @@ O menu passa a ser o hamburger depois que diminui */
   background-color: #586875;
   color: #fff;
   text-align: center;
+
 }
 
 .container footer a {
   color: #f6eddc;
+  margin: 20px;
 }
 
 /* Aqui começa a configuração do carrossel */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 700px;
   position: relative;
   margin: auto;
 }
@@ -189,7 +191,7 @@ O menu passa a ser o hamburger depois que diminui */
 /* Aqui são as configurações das legendas das imagens do carrossel */
 .text {
   color: black;
-  font-size: 50px;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -248,4 +250,35 @@ O menu passa a ser o hamburger depois que diminui */
   to {
     opacity: 1;
   }
+}
+
+
+
+/* banner */
+.banner-text {
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 3vw;
+  font-weight: 0;
+  position: absolute;
+  margin: 6.5vw 4.5vw 2.5vw 4.5vw;
+  text-shadow: .8px .8px 4px black;
+  width: 50%;
+  text-align: left;
+}
+
+.banner-text b {
+  color: rgb(101, 191, 252);
+}
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../img/banner.jpeg");
+  height: 18vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
