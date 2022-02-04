@@ -6,43 +6,82 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotelaria</title>
+
   <link rel="stylesheet" type="text/css" href="style.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300&family=Sedgwick+Ave&display=swap');
-    </style>
-
-
+  </style>
 </head>
 
-
 <body>
-
-  <header>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre Nós</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Guia de Destinos</a></li>
-        <li><a href="#">Contatos</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </button>
-  </header>
+  <!-- Aqui é a header com a barra de navegação -->
+  <section id="nav-background">
+    <div id="nav-container">
+      <header id="nav-header">
+        <h1><a href="#" id="nav-logo">LOGO</a></h1>
+        <div id="nav-menu-button">MENU</div>
+      </header>
+      <nav>
+        <ul class="nav-ul hide-ul">
+          <li><a class="nav-link " href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Sobre nós</a></li>
+          <li><a class="nav-link" href="#">Produtos</a></li>
+          <li><a class="nav-link" href="#">Guia de Destinos</a></li>
+          <li><a class="nav-link" href="#">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <div>>Qual seu próximo destino?</div>
   <section class="container">
-    <div class="content">
-      <div class="box1">aqui uma caixa</div>
-      <img class="logo" src="../../img/Roteiro__1_-removebg-preview.png" alt="">
-      
-      <div class="box2"><h1 class="destinos">Qual seu proximo <br> destino?</h1></div>
+
+
+    <!-- Aqui é o carrossel de imagens -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="../../img/imagem1.jpeg" style="width:100%">
+        <div class="text">Conheça Porto de Galinhas</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="../../img/imagem2.jpeg" style="width:100%">
+        <div class="text">Verificar que cidade é</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="../../img/imagem3.jpeg" style="width:100%">
+        <div class="text">Verificar que cidade é</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="../../img/imagem4.jpeg" style="width:100%">
+        <div class="text">Conheça Campos do Jordão</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="../../img/imagem5.jpeg" style="width:100%">
+        <div class="text">Verificar que cidade é</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
+<!-- Aqui é o footer -->
     <footer>
-      <p>Created by Dalvino, Henrique, Eliberg, Lana Souza, Welisson</p>
+      <p>Created by Dalvino Santos, Henrique Felix, Elibergh Santiago, Lana Souza, Welisson Sousa</p>
       <a href="https://www.instagram.com/soulcodeacademy" target="blank"> <i data-feather="instagram"> </i></a>
       <a href="https://www.linkedin.com/company/soulcodeacademy" target="blank"><i data-feather="linkedin"></i></a>
       <a href="" target="blank"><i data-feather="twitter"></i></a>

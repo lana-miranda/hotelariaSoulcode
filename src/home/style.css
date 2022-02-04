@@ -5,163 +5,134 @@
 .color4 { #a5c8ca };
 .color5 { #586875 }; */
 
-.menu ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: fixed;
-  top: -100vh;
-  left: 0;
-  width: 100vw;
-}
-
-.menu li {
-  background-image: linear-gradient(
-    112deg,
-    rgba(72, 178, 215, 1) 0%,
-    rgba(113, 193, 221, 1) 100%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-  height: 100vh;
-  width: 20vw;
-}
-
-.menu li a {
-  color: #fff;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.menu li a:hover {
-  text-decoration: underline;
-}
-
-.menu li:nth-of-type(2) {
-  transition-delay: 0.025s;
-}
-
-.menu li:nth-of-type(3) {
-  transition-delay: 0.05s;
-}
-
-.menu li:nth-of-type(4) {
-  transition-delay: 0.075s;
-}
-
-.menu li:nth-of-type(5) {
-  transition-delay: 0.1s;
-}
-
-.menu.open li {
-  transform: translateY(100vh);
-}
-
-@media (max-width: 768px) {
-  .menu ul {
-    flex-direction: column;
-    top: 0;
-    left: -100vw;
-  }
-
-  .menu li {
-    height: 20vh;
-    width: 100vw;
-  }
-
-  .menu.open li {
-    transform: translateX(100vw);
-  }
-}
-
-/* Hamburger menu */
-.hamburger {
-  background-color: #fff;
-  border-radius: 50%;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  border: 0;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-}
-
-.hamburger:focus {
-  outline: 0;
-}
-
-.hamburger .line {
-  background-color: #000;
-  display: block;
-  margin: 4px auto;
-  height: 2px;
-  width: 20px;
-  transition: all 0.1s ease-in;
-}
-
-.hamburger.open .line:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.hamburger.open .line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open .line:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-/* General styles */
+/* Aqui começa o estilo da header e da barra de navegação */
 body {
-  background-color: #fff;
+  background-color: #bdd6d2;
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  max-height: 100vh;
 }
 
-p {
-  letter-spacing: 0.5px;
-  line-height: 1.6;
-}
-.destinos {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 45px;
-  text-align: center;
-  color: #154d61;
-  padding-bottom: 25%;
-  margin-left: 5%;
-}
-.logo {
-  padding: 0 0 18% 3%;
-  text-align: center;
-  width: 18%;
+#nav-container  nav  ul {
+  list-style-type: none;
 }
 
-.content {
+/* Barra de Navegação -  */
+#nav-background {
+  position: fixed;
+  top: 0;
+  z-index: 9000; /*para o carrossel não sobrepor */
+  width: 100%;
+  background-color: #a5c8ca;
+  border-bottom: 1px solid #ddd;
+}
+
+#nav-container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: center;
-  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
+
+#nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo {
+  color: #444;
+  text-decoration: none;
+}
+#nav-logo:hover {
+  color: #f6eddc;
+}
+
+.nav-ul {
+  display: flex;
+  max-width: 715px;
+}
+
+.nav-ul  li {
+  display: flex;
+}
+
+.nav-link {
+  flex: 1;
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 200ms;
+}
+
+.nav-link:hover {
+  background-color: #f6eddc;
+  border-radius: 10px;
+}
+
+/* Aqui eu trato a questão da resposividade, para a parte do header
+O menu passa a ser o hamburger depois que diminui */
+
+@media screen and (max-width: 700px) {
+  #nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #f6eddc ;
+    cursor: pointer;
+    margin-right: 47px;
+  }
+
+  .nav-ul {
+    display: block;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 90vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  #nav-menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Aqui movemos a logo para quando diminuir a tela ela não fique colada no canto esquerdo */
+@media screen and (max-width: 1040px) {
+  #nav-logo {
+    margin-left: 1rem;
+  }
+}
+
+/* Aqui é a configuração do container geral que engloba a parte do carrossel e footer */
 
 .container {
-  background-image: url(../../img/undraw_trip_dv-9-f.svg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
 }
 
 .container footer {
@@ -171,5 +142,110 @@ p {
 }
 
 .container footer a {
-  color: #fff;
+  color: #f6eddc;
+}
+
+/* Aqui começa a configuração do carrossel */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Inicialmente as imagens ficam ocultadas por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Aqui fica a configuração dos botões que movem os slides */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Aqui eu crio o posicionamento para o botão next (setinha) fique do lado direito*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Aqui coloquei um hover para quando passar o mause nas setas ele pegar uma cor escura mas com tom transparente ao fundo */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Aqui são as configurações das legendas das imagens do carrossel */
+.text {
+  color: black;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; 
+
+}
+
+/* Aqui fica a configuração do contatdor das imagens, aqueles números que ficam em cima mostrando em qual imagem a pessoa está */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Aqui são as ferramentas de animação colequei para dar aquele efeito de slide no carrossel */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
