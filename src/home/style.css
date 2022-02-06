@@ -1,19 +1,16 @@
 /* cores
-.color1 { #f6eddc };
-.color2 { #e3e5d7 };
-.color3 { #bdd6d2 };
-.color4 { #a5c8ca };
-.color5 { #586875 }; */
+azul: #005eff
+rosa: #E74471
+cinza: #F3F3F3 */
 
 /* Aqui começa o estilo da header e da barra de navegação */
 body {
-  background-color: #bdd6d2;
+  background-color: #fff;
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  max-height: 100vh;
 }
 
-#nav-container  nav  ul {
+#nav-container nav ul {
   list-style-type: none;
 }
 
@@ -23,11 +20,10 @@ body {
   top: 0;
   z-index: 9000; /*para o carrossel não sobrepor */
   width: 100%;
-  background-color: #a5c8ca;
-  border-bottom: 1px solid #ddd;
+  background-color: #005eff;
 }
 
-#nav-container {
+.content {
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
@@ -41,11 +37,8 @@ body {
 }
 
 #nav-logo {
-  color: #444;
+  color: #fff;
   text-decoration: none;
-}
-#nav-logo:hover {
-  color: #f6eddc;
 }
 
 .nav-ul {
@@ -53,13 +46,13 @@ body {
   max-width: 715px;
 }
 
-.nav-ul  li {
+.nav-ul li {
   display: flex;
 }
 
 .nav-link {
   flex: 1;
-  color: #444;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
@@ -67,79 +60,101 @@ body {
 }
 
 .nav-link:hover {
-  background-color: #f6eddc;
+  background-color: #fff;
   border-radius: 10px;
+  color: #005eff;
 }
 
-/* Aqui eu trato a questão da resposividade, para a parte do header
-O menu passa a ser o hamburger depois que diminui */
-
-@media screen and (max-width: 700px) {
-  #nav-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-menu-button {
-    padding: 1rem;
-    background-color: #f6eddc ;
-    cursor: pointer;
-    margin-right: 47px;
-  }
-
-  .nav-ul {
-    display: block;
-    flex-direction: column;
-    overflow: auto;
-    direction: rtl;
-    transition: max-height 400ms;
-    max-height: 90vh;
-  }
-
-  .hide-ul {
-    max-height: 0;
-  }
-
-  .nav-link {
-    padding: 1rem 0;
-    font-size: 1.3rem;
-    border-bottom: 1px solid #f4f4f4;
-  }
+/* banner */
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../../img/banner.jpeg');
+  height: 18vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 86px;
 }
 
-@media screen and (min-width: 701px) {
-  #nav-menu-button {
-    display: none;
-  }
-
-  .nav-link {
-    flex-basis: auto;
-    padding: 1rem 1.5rem;
-  }
+.banner h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 0;
+  position: absolute;
+  margin: 6.5vw 4.5vw 2.5vw 1vw;
+  text-shadow: 0.8px 0.8px 4px black;
+  text-align: left;
 }
 
-/* Aqui movemos a logo para quando diminuir a tela ela não fique colada no canto esquerdo */
-@media screen and (max-width: 1040px) {
-  #nav-logo {
-    margin-left: 1rem;
-  }
+.banner b {
+  color: rgb(101, 191, 252);
+}
+
+.box-reservations {
+  background-color: #e74471;
+  color: white;
+}
+
+.box-reservations h2 {
+  width: 20%;
+}
+
+.box-reservations .input-area {
+  margin-top: 25px;
+  margin-left: 1%;
+}
+
+.box-reservations .input-area input {
+  margin-top: 2px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.box-reservations .input-area input[type='date'] {
+  padding: 7px 10px;
+}
+
+.box-reservations .input-area.large {
+  width: 25%;
+}
+
+.box-reservations .input-area.medium {
+  width: 20%;
+}
+
+.box-reservations .input-area.small {
+  width: 10%;
+}
+
+.box-reservations .input-area button {
+  padding: 9px 5px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #005eff;
+  color: #fff;
+  border: none;
 }
 
 /* Aqui é a configuração do container geral que engloba a parte do carrossel e footer */
-
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: first baseline;
+  display: block;
+  width: 100%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: first baseline;
   width: 100vw;
-  height: 120vh;
+  height: 120vh; */
 }
 
 .container footer {
-  background-color: #586875;
+  background-color: #333;
   color: #fff;
   text-align: center;
-
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .container footer a {
@@ -149,9 +164,9 @@ O menu passa a ser o hamburger depois que diminui */
 
 /* Aqui começa a configuração do carrossel */
 .slideshow-container {
-  max-width: 700px;
+  display: block;
   position: relative;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Inicialmente as imagens ficam ocultadas por padrão */
@@ -174,18 +189,13 @@ O menu passa a ser o hamburger depois que diminui */
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Aqui eu crio o posicionamento para o botão next (setinha) fique do lado direito*/
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-
-/* Aqui coloquei um hover para quando passar o mause nas setas ele pegar uma cor escura mas com tom transparente ao fundo */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Aqui são as configurações das legendas das imagens do carrossel */
@@ -196,8 +206,10 @@ O menu passa a ser o hamburger depois que diminui */
   position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center; 
-
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 /* Aqui fica a configuração do contatdor das imagens, aqueles números que ficam em cima mostrando em qual imagem a pessoa está */
@@ -226,6 +238,19 @@ O menu passa a ser o hamburger depois que diminui */
   background-color: #717171;
 }
 
+.dots {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sale {
+  margin-bottom: 20px;
+}
+
+.sale img {
+  height: 290px;
+}
+
 /* Aqui são as ferramentas de animação colequei para dar aquele efeito de slide no carrossel */
 .fade {
   -webkit-animation-name: fade;
@@ -252,33 +277,92 @@ O menu passa a ser o hamburger depois que diminui */
   }
 }
 
+/* Aqui eu trato a questão da resposividade, para a parte do header
+O menu passa a ser o hamburger depois que diminui */
+@media screen and (max-width: 1002px) {
+  .sale {
+    flex-direction: column;
+  }
 
+  .sale img {
+    width: 100%;
+    height: auto;
+  }
 
-/* banner */
-.banner-text {
-  text-align: center;
-  color: white;
+  .sale img:first-child {
+    margin-bottom: 20px;
+  }
 }
 
-.banner-text h1 {
-  font-size: 3vw;
-  font-weight: 0;
-  position: absolute;
-  margin: 6.5vw 4.5vw 2.5vw 4.5vw;
-  text-shadow: .8px .8px 4px black;
-  width: 50%;
-  text-align: left;
+@media screen and (max-width: 700px) {
+  #nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #fff;
+    color: #005eff;
+    cursor: pointer;
+    margin-right: 47px;
+    border-radius: 10px;
+  }
+
+  .nav-ul {
+    display: block;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 90vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  .box-reservations .content {
+    flex-direction: column;
+  }
+
+  .box-reservations h2,
+  .box-reservations .input-area {
+    display: block;
+    width: 80% !important;
+    margin-left: 10%;
+  }
+
+  .box-reservations .input-area {
+    margin-top: 15px;
+  }
+
+  .box-reservations .input-area button {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
 }
 
-.banner-text b {
-  color: rgb(101, 191, 252);
+@media screen and (min-width: 701px) {
+  #nav-menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
 }
 
-.banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../img/banner.jpeg");
-  height: 18vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+/* Aqui movemos a logo para quando diminuir a tela ela não fique colada no canto esquerdo */
+@media screen and (max-width: 1040px) {
+  #nav-logo {
+    margin-left: 1rem;
+  }
 }

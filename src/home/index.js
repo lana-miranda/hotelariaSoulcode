@@ -11,11 +11,11 @@
   navButton.onclick = toggleMobileMenu;
 })();
 
-
 // Aqui é a parte que configura os slides
 
+var slidesTotal = 5;
 var slideIndex = 1;
-showSlides(slideIndex); 
+showSlides(slideIndex);
 
 // controle para ir para frente e para trás nas imagens
 function plusSlides(n) {
@@ -27,9 +27,24 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
-// aqui é a função que controla os slides
+function nextSlide() {
+  if (slideIndex === slidesTotal) {
+    slideIndex = 1;
+  } else {
+    slideIndex += 1;
+  }
 
+  showSlides(slideIndex);
+}
+
+var timeout = null;
+
+// aqui é a função que controla os slides
 function showSlides(n) {
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+
   var i;
   var slides = document.getElementsByClassName('mySlides');
   var dots = document.getElementsByClassName('dot');
@@ -47,4 +62,6 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
+
+  timeout = setTimeout(nextSlide, 4000);
 }

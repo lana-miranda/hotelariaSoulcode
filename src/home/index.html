@@ -16,18 +16,18 @@
 <body>
   <!-- Aqui é a header com a barra de navegação -->
   <section id="nav-background">
-    <div id="nav-container">
+    <div class="content" id="nav-container">
       <header id="nav-header">
         <h1><a href="#" id="nav-logo">LOGO</a></h1>
         <div id="nav-menu-button">MENU</div>
       </header>
       <nav>
         <ul class="nav-ul hide-ul">
-          <li><a class="nav-link " href="#">Home</a></li>
-          <li><a class="nav-link" href="#">Sobre nós</a></li>
-          <li><a class="nav-link" href="#">Produtos</a></li>
-          <li><a class="nav-link" href="#">Guia de Destinos</a></li>
-          <li><a class="nav-link" href="#">Contatos</a></li>
+          <li><a class="nav-link" href="../home/index.html">Home</a></li>
+          <li><a class="nav-link" href="../sobreNós/index.html">Sobre nós</a></li>
+          <li><a class="nav-link" href="../produtos/index.html">Produtos</a></li>
+          <li><a class="nav-link" href="../destinos/index.html">Guia de Destinos</a></li>
+          <li><a class="nav-link" href="../contatos/index.html">Contatos</a></li>
         </ul>
       </nav>
     </div>
@@ -35,58 +35,96 @@
 
   <section class="container">
     <div class="banner">
-      <div class="banner-text">
-        <h1><b> Qual seu próximo Destino?</b> Explore aqui a sua aventura</h1>
+      <div class="content">
+        <h1><b> Qual seu próximo Destino?</b><br /> Explore aqui a sua aventura</h1>
       </div>
     </div>
+    <div class="box-reservations">
+      <form class="content" action="produtos.html" method="post">
+        <h2>Hospedagem com reserva flexível!</h2>
+        <div class="input-area large">
+          <label for="destination">Destino</label>
+          <input type="text" id="destination">
+        </div>
+        <div class="input-area medium">
+          <label for="start-date">Entrada</label>
+          <input type="date" id="start-date">
+        </div>
+        <div class="input-area medium">
+          <label for="end-date">Saída</label>
+          <input type="date" id="end-date">
+        </div>
+        <div class="input-area small">
+          <label for="number-of-people">Pessoas</label>
+          <input type="number" id="number-of-people" min="1">
+        </div>
+        <div class="input-area small">
+          <button><i data-feather="search" height="18"></i></button>
+        </div>
+      </form>
+    </div>
 
-
-
+    <div class="content">
+      <h2>Top destinos mais buscados hoje no Brasil</h2>
+    </div>
 
     <!-- Aqui é o carrossel de imagens -->
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 5</div>
-        <img src="../../img/imagem1.jpeg" style="width:100%">
-        <div class="text">Conheça Porto de Galinhas</div>
-      </div>
+    <div class="content">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="../../img/imagem1.jpeg" style="width:100%">
+          <div class="text">Porto de Galinhas</div>
+        </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 5</div>
-        <img src="../../img/imagem2.jpeg" style="width:100%">
-        <div class="text">Verificar que cidade é</div>
-      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="../../img/imagem2.jpeg" style="width:100%">
+          <div class="text">Natal</div>
+        </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 5</div>
-        <img src="../../img/imagem3.jpeg" style="width:100%">
-        <div class="text">Verificar que cidade é</div>
-      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="../../img/imagem3.jpeg" style="width:100%">
+          <div class="text">Bombinhas</div>
+        </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">4 / 5</div>
-        <img src="../../img/imagem4.jpeg" style="width:100%">
-        <div class="text">Conheça Campos do Jordão</div>
-      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="../../img/imagem4.jpeg" style="width:100%">
+          <div class="text">Campos do Jordão</div>
+        </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">5 / 5</div>
-        <img src="../../img/imagem5.jpeg" style="width:100%">
-        <div class="text">Verificar que cidade é</div>
-      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="../../img/imagem5.jpeg" style="width:100%">
+          <div class="text">Canoa Quebrada</div>
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
     </div>
     <br>
 
-    <div style="text-align:center">
+    <div class="dots">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-<!-- Aqui é o footer -->
+    <div class="content">
+      <h2>Confira as nossas promoções</h2>
+    </div>
+
+    <div class="sale content">
+      <img class="large" src="../../img/ofertacarnaval.jpg" />
+      <img class="medium" src="../../img/ofertahotel1.jpg" />
+    </div>
+
+    <!-- Aqui é o footer -->
     <footer>
       <p>Created by Dalvino Santos, Henrique Felix, Elibergh Santiago, Lana Souza, Welisson Sousa</p>
       <a href="https://www.instagram.com/soulcodeacademy" target="blank"> <i data-feather="instagram"> </i></a>

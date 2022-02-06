@@ -1,0 +1,279 @@
+/* cores
+azul: #005eff
+rosa: #E74471
+cinza: #F3F3F3 */
+
+/* Aqui começa o estilo da header e da barra de navegação */
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+#nav-container nav ul {
+  list-style-type: none;
+}
+
+/* Barra de Navegação -  */
+#nav-background {
+  position: fixed;
+  top: 0;
+  z-index: 9000; /*para o carrossel não sobrepor */
+  width: 100%;
+  background-color: #005eff;
+}
+
+.content {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-ul {
+  display: flex;
+  max-width: 715px;
+}
+
+.nav-ul li {
+  display: flex;
+}
+
+.nav-link {
+  flex: 1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 200ms;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #005eff;
+}
+
+/* banner */
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('./img/banner.jpg');
+  height: 18vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 86px;
+}
+
+.banner h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 0;
+  position: absolute;
+  margin: 6.5vw 4.5vw 2.5vw 1vw;
+  text-shadow: 0.8px 0.8px 4px black;
+  text-align: left;
+}
+
+.banner b {
+  color: rgb(101, 191, 252);
+}
+
+/* Aqui é a configuração do container geral que engloba a parte do carrossel e footer */
+.container {
+  display: block;
+  width: 100%;
+}
+
+.container footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.container footer a {
+  color: #f6eddc;
+  margin: 20px;
+}
+
+/* css wellison */
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px 20px 20px;
+  background-color: #ecf9ff;
+  color: #1c1c1c;
+  line-height: 30px;
+  font-size: 19px;
+}
+
+#sobre h2 {
+  color: #1c1c1c;
+}
+
+#sobre p {
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+  line-height: 30px;
+  font-size: 19px;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: justify;
+  list-style: none;
+  margin: 0 0 25px 0;
+  padding: 0;
+  width: 100%;
+}
+
+#culturas {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+  font-size: 19px;
+}
+
+.info {
+  width: 24%;
+  text-align: center;
+}
+
+.infocard {
+  width: 32%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #005eff;
+  transition: 0.5s;
+  color: #fff;
+  min-height: 690px;
+}
+.infocard h3,
+.infocard p {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.infocard:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.infocard img {
+  width: 100%;
+}
+.botao {
+  color: #1c1c1c;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 700px) {
+  #nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #fff;
+    color: #005eff;
+    cursor: pointer;
+    margin-right: 47px;
+    border-radius: 10px;
+  }
+
+  .nav-ul {
+    display: block;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 90vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  .box-reservations .content {
+    flex-direction: column;
+  }
+
+  .box-reservations h2,
+  .box-reservations .input-area {
+    display: block;
+    width: 80% !important;
+    margin-left: 10%;
+  }
+
+  .box-reservations .input-area {
+    margin-top: 15px;
+  }
+
+  .box-reservations .input-area button {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .sale {
+    flex-direction: column;
+  }
+
+  .sale img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sale img:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  #nav-menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Aqui movemos a logo para quando diminuir a tela ela não fique colada no canto esquerdo */
+@media screen and (max-width: 1040px) {
+  #nav-logo {
+    margin-left: 1rem;
+  }
+}

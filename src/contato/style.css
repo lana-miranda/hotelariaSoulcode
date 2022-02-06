@@ -1,0 +1,189 @@
+/* cores
+azul: #005eff
+rosa: #E74471
+cinza: #F3F3F3 */
+
+/* Aqui começa o estilo da header e da barra de navegação */
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+#nav-container nav ul {
+  list-style-type: none;
+}
+
+/* Barra de Navegação -  */
+#nav-background {
+  position: fixed;
+  top: 0;
+  z-index: 9000; /*para o carrossel não sobrepor */
+  width: 100%;
+  background-color: #005eff;
+}
+
+.content {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-ul {
+  display: flex;
+  max-width: 715px;
+}
+
+.nav-ul li {
+  display: flex;
+}
+
+.nav-link {
+  flex: 1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 200ms;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #005eff;
+}
+
+
+
+/* Aqui é a configuração do container geral que engloba a parte do carrossel e footer */
+.container {
+  display: block;
+  width: 100%;
+}
+
+.container footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.container footer a {
+  color: #f6eddc;
+  margin: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  #nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #fff;
+    color: #005eff;
+    cursor: pointer;
+    margin-right: 47px;
+    border-radius: 10px;
+  }
+
+  .nav-ul {
+    display: block;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 90vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+}
+
+@media screen and (min-width: 701px) {
+  #nav-menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Aqui movemos a logo para quando diminuir a tela ela não fique colada no canto esquerdo */
+@media screen and (max-width: 1040px) {
+  #nav-logo {
+    margin-left: 1rem;
+  }
+}
+
+
+
+/* Css Dalvino */
+.fundo {
+  border-radius: 5px;
+  background-color:  #E74471;
+  color: white;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 4px 4px 4px rgb(169, 221, 204);
+  
+}
+.conteiner_Flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 6%;
+  padding-top: 9%;
+}
+.icongrande{
+  width: 60%;
+  padding-left: 2.5%;
+  padding-top: 2.5%;
+
+}
+input[type=text],input[type=email],input[type=phone]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid antiquewhite;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #005eff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #ffae00;
+}
