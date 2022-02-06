@@ -68,7 +68,7 @@ body {
 /* banner */
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../img/banner.jpeg');
+    url('../../img/banner-image2.jpg');
   height: 18vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,11 +142,6 @@ body {
 .container {
   display: block;
   width: 100%;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: first baseline;
-  width: 100vw;
-  height: 120vh; */
 }
 
 .container footer {

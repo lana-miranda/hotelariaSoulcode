@@ -145,9 +145,7 @@ img {
   align-items: center;
 }
 
-.logo {
-  width: 100px;
-}
+
 
 .container {
   width: 100%;
@@ -169,17 +167,18 @@ img {
 }
 
 .btn {
-  color: #ffffff;
+  background-color: #E74471;
+  color: #fff;
+  border: none;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
-  border-radius: 4px;
   font-weight: 400;
   display: block;
   width: 100%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+
 }
 
 .btn:hover {
@@ -218,7 +217,7 @@ img {
 
 .card_content {
   padding: 0.8rem;
-  background: #586875;
+  background: #88abc2;
 }
 
 .card_title {

@@ -65,8 +65,6 @@ body {
   color: #005eff;
 }
 
-
-
 /* Aqui é a configuração do container geral que engloba a parte do carrossel e footer */
 .container {
   display: block;
@@ -119,7 +117,6 @@ body {
     font-size: 1.3rem;
     border-bottom: 1px solid #f4f4f4;
   }
-
 }
 
 @media screen and (min-width: 701px) {
@@ -139,51 +136,47 @@ body {
     margin-left: 1rem;
   }
 }
+/* css henrique */
 
-
-
-/* Css Dalvino */
-.fundo {
-  border-radius: 5px;
-  background-color:  #E74471;
-  color: white;
-  padding: 20px;
-  width: 40%;
-  box-shadow: 4px 4px 4px rgb(169, 221, 204);
-  
-}
-.conteiner_Flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 6%;
-  padding-top: 14%;
-}
-.icongrande{
-  width: 60%;
-  padding-left: 2.5%;
-  padding-top: 2.5%;
-
-}
-input[type=text],input[type=email],input[type=phone]{
+.Rainha {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid antiquewhite;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin: 86px 0 0 0;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 1.13vh;
+  overflow-y: scroll;
 }
-input[type=submit] {
-  width: 100%;
-  background-color: #005eff;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+.Rainha li {
+  margin-left: 29.5%;
+  margin-bottom: 1.5vh;
+}
+.conteiner {
+  width: 99%;
+  margin: 1vh;
+  border-radius: 1vh;
+  float: left;
+  background-color: #d0e0eb;
+  justify-items: left;
+}
+
+img {
+  float: left;
+  border: 0.16vh solid #586875;
+  border-radius: 1vh;
+  margin: 1vh;
+}
+
+button {
+  padding: 9px 5px;
+  margin-top: 20px;
+  width: 13%;
+  background-color: #E74471;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
 }
-input[type=submit]:hover {
-  background-color: #ffae00;
+h3{
+  font-size: 4vh;
+  width: 10%;
+  padding-left: 10px;
 }

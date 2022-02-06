@@ -173,6 +173,7 @@ body {
 .infocard p {
   box-sizing: border-box;
   padding: 0 10px;
+  font-size: 16px;
 }
 
 .infocard:hover {
@@ -189,7 +190,9 @@ body {
   padding: 10px 30px;
   background-color: #f1f1f1;
   font-size: 0.9em;
-  border-radius: 3px;
+  background-color: #E74471;
+  color: #fff;
+  border: none;
 }
 
 @media screen and (max-width: 700px) {
