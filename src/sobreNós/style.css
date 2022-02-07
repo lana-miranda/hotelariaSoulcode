@@ -190,7 +190,7 @@ body {
   padding: 10px 30px;
   background-color: #f1f1f1;
   font-size: 0.9em;
-  background-color: #E74471;
+  background-color: #e74471;
   color: #fff;
   border: none;
 }
@@ -229,37 +229,9 @@ body {
     border-bottom: 1px solid #f4f4f4;
   }
 
-  .box-reservations .content {
-    flex-direction: column;
-  }
-
-  .box-reservations h2,
-  .box-reservations .input-area {
-    display: block;
-    width: 80% !important;
-    margin-left: 10%;
-  }
-
-  .box-reservations .input-area {
-    margin-top: 15px;
-  }
-
-  .box-reservations .input-area button {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-
-  .sale {
-    flex-direction: column;
-  }
-
-  .sale img {
+  .infocard {
     width: 100%;
-    height: auto;
-  }
-
-  .sale img:first-child {
-    margin-bottom: 20px;
+    margin: 25px;
   }
 }
 

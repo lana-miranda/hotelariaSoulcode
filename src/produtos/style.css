@@ -136,7 +136,7 @@ body {
     margin-left: 1rem;
   }
 }
-/* css henrique */
+
 
 .Rainha {
   width: 100%;
@@ -149,6 +149,7 @@ body {
 .Rainha li {
   margin-left: 29.5%;
   margin-bottom: 1.5vh;
+  list-style-type: none;
 }
 .conteiner {
   width: 99%;
